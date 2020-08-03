@@ -1,0 +1,64 @@
+/* reset.css */
+html,body,div,dl,dt,dd,ul,ol,li,p,blockquote,pre,hr,figure,table,caption,th,td,form,fieldset,legend,input,button,textarea,menu{margin:0;padding:0;}
+header,footer,section,article,aside,nav,hgroup,address,figure,figcaption,menu,details{display:block;}
+table{border-collapse:collapse;border-spacing:0;}
+caption,th{text-align:left;font-weight:normal;}
+html,body,fieldset,img,iframe,abbr{border:0;}
+i,cite,em,var,address,dfn{font-style:normal;}
+[hidefocus],summary{outline:0;}
+li{list-style:none;}
+pre,kbd,samp{font-family:inherit;}
+q:before,q:after{content:none;}
+textarea{overflow:auto;resize:none;}
+label,summary{cursor:default;}
+a,button{cursor:pointer;}
+h1,h2,h3,h4,h5,h6,em,strong,b{font-weight:bold;}
+del,ins,u,s,a,a:hover{text-decoration:none;}
+a,a:hover{color:purple;}
+code{background:#282c34;color:#abb2bf;display:block;overflow:scroll}
+
+/* common */
+html,
+body {
+  font-size: 14px;
+  word-spacing: 1px;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, 'PingFang SC',
+    'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', Arial, sans-serif;
+}
+img{
+  width: 100%;
+}
+html,
+body,
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+.clearfix::after{
+  content: '';
+  display: block;
+  height: 0;
+  clear: both;
+}
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+/*竖向滚动条*/      
+::-webkit-scrollbar-thumb:vertical {
+  height: 5px;
+  background-color: rgba(102, 102, 102, .4);
+  -webkit-border-radius: 6px;
+}
+/*横向滚动条*/          
+::-webkit-scrollbar-thumb:horizontal {
+  width: 5px;
+  background-color: rgba(102, 102, 102, .4);
+  -webkit-border-radius: 6px;
+}
