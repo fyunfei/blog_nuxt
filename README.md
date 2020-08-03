@@ -2,9 +2,9 @@
 ## 介绍
 个人博客nuxt版
 ## 具体功能
-- 博文展示（finish）
-- 相册系统（doing）
-- 个人简历（doing）
+- [x] 博文展示（finish）
+- [ ] 相册系统（doing）
+- [ ] 个人简历（doing）
 
 
 ## Build Setup
