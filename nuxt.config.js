@@ -38,17 +38,21 @@ export default {
    */
   css: [
     'iview/dist/styles/iview.css',
-    'highlight.js/styles/agate.css',
     '@/assets/css/reset.css',
     '@/assets/css/utils.css',
-    '@/assets/css/markdown.css',
+    '@/assets/css/markdown.min.css',
     '@/assets/iconfont/iconfont.css',
   ],
   /*
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
    */
-  plugins: ['@/plugins/iview', '@/plugins/filter', '@/plugins/baidu'],
+  plugins: [
+    '@/plugins/iview',
+    '@/plugins/filter',
+    '@/plugins/baidu',
+    '@/plugins/highlight.js',
+  ],
   /*
    ** Auto import components
    ** See https://nuxtjs.org/api/configuration-components
@@ -77,7 +81,7 @@ export default {
   },
   proxy: {
     '/api/': {
-      target: 'http://blog.followmyheart.cn',
+      target: 'http://49.232.31.160:3000',
       changeOrigin: true,
       pathRewrite: { '^/api/': '' },
     },

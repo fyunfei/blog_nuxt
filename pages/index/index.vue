@@ -54,9 +54,8 @@
 </template>
 
 <script>
-import { Article } from '@/services/index'
 export default {
-  async asyncData({
+  asyncData({
     isDev,
     route,
     store,
@@ -67,20 +66,14 @@ export default {
     res,
     redirect,
     error,
+    $axios,
   }) {
-    let articleList = {}
-    try {
-      await Article.get().then((res) => {
-        for (const val of res.result) {
-          val.textHidden = true
-        }
-        articleList = res.result
-      })
-    } catch (err) {}
-
-    return {
-      articleList,
-    }
+    return $axios.get('/api/article').then((res) => {
+      for (const val of res.data.result) {
+        val.textHidden = true
+      }
+      return { articleList: res.data.result }
+    })
   },
   data() {
     return {
@@ -110,12 +103,12 @@ export default {
     }
   },
   created() {
-    Article.get().then((res) => {
+    /* Article.get().then((res) => {
       for (const val of res.result) {
         val.textHidden = true
       }
       this.articleList = res.result
-    })
+    }) */
   },
   methods: {
     /**

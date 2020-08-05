@@ -6,6 +6,13 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "8758492",
+      "name": "火箭",
+      "font_class": "huojian",
+      "unicode": "e6c0",
+      "unicode_decimal": 59072
+    },
+    {
       "icon_id": "949535",
       "name": "aui-icon-camera",
       "font_class": "camera",
