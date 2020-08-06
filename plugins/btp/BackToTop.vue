@@ -6,6 +6,7 @@
 
 <script>
 export default {
+  name: 'BackToTop',
   data() {
     return {
       backTopVisible: false,
@@ -13,8 +14,10 @@ export default {
     }
   },
   mounted() {
-    this.judgeScrollTop()
-    window.addEventListener('scroll', this.judgeScrollTop, false)
+    this.$nextTick(() => {
+      this.judgeScrollTop()
+      window.addEventListener('scroll', this.judgeScrollTop, false)
+    })
   },
   methods: {
     judgeScrollTop() {
