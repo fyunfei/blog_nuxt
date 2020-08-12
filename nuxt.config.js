@@ -52,6 +52,10 @@ export default {
     '@/plugins/filter',
     '@/plugins/baidu',
     '@/plugins/highlight.js',
+    {
+      src: '@/plugins/back',
+      ssr: false,
+    },
   ],
   /*
    ** Auto import components
@@ -90,5 +94,7 @@ export default {
    ** Build configuration
    ** See https://nuxtjs.org/api/configuration-build/
    */
-  build: {},
+  build: {
+    analyze: true,
+  },
 }

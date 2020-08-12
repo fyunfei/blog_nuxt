@@ -4,7 +4,9 @@
     <div class="main">
       <nuxt-child></nuxt-child>
     </div>
-    <back-to-top></back-to-top>
+    <no-ssr>
+      <back-to-top></back-to-top>
+    </no-ssr>
   </div>
 </template>
 
