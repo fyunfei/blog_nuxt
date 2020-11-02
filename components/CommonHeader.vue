@@ -64,11 +64,11 @@ export default {
       }
     },
     // @todo 增加顶部导航栏滚动效果
-    judgeScrollTop() {
+    /* judgeScrollTop() {
       const scrollTop =
         document.documentElement.scrollTop || document.body.scrollTop
       console.log(scrollTop)
-    },
+    }, */
   },
 }
 </script>

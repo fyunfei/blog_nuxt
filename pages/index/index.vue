@@ -102,14 +102,6 @@ export default {
       ],
     }
   },
-  created() {
-    /* Article.get().then((res) => {
-      for (const val of res.result) {
-        val.textHidden = true
-      }
-      this.articleList = res.result
-    }) */
-  },
   methods: {
     /**
      * @param {object} article 当前文章内容
