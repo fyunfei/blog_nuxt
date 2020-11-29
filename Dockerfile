@@ -1,10 +1,12 @@
-FROM node:8.11.3-alpine
+FROM node
 RUN mkdir -p /app
-COPY . /app
+COPY /.nuxt /app/.nuxt
+COPY /static /app/static
+COPY nuxt.config.js /app/
+COPY package.json /app/
+COPY package-lock.json /app/
 WORKDIR /app
-EXPOSE 3001
+EXPOSE 1024
 RUN npm install -g cnpm --registry=https://registry.npm.taobao.org
-RUN cnpm install
-ENV NODE_ENV=production
-ENV HOST 0.0.0.0
+RUN cnpm install --production
 CMD ["npm","start"]

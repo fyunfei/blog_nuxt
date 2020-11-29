@@ -69,10 +69,11 @@ export default {
     $axios,
   }) {
     return $axios.get('/api/article').then((res) => {
-      for (const val of res.data.result) {
+      for (const val of res.data.result.list) {
         val.textHidden = true
       }
-      return { articleList: res.data.result }
+      const { current, total } = res.data.result
+      return { articleList: res.data.result.list, current, total }
     })
   },
   data() {
